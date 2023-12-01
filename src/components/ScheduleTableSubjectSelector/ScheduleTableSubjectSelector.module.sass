@@ -1,0 +1,87 @@
+
+.SubjectSelectorWrapper 
+    position: relative
+    box-sizing: border-box
+    z-index: 900
+    
+
+    .SubjectSelectorContent 
+        background: transparent
+        border-radius: 15px 
+        padding: 1rem
+        font-size: 12px
+        display: grid 
+        gap: .6rem
+        
+        .Cont1
+            display: grid 
+            justify-items: start
+
+            .SubjectSelectorHeader 
+                border: none 
+                font-size: 16px
+                font-style: italic
+                background: transparent
+                cursor: pointer
+
+        .Cont2 
+            display: flex
+            justify-content: space-between
+            gap: .5rem
+
+            .SaveBtn
+                background: #000
+                border: none 
+                padding: .6rem
+                border-radius: 100px
+                cursor: pointer 
+                transition: .2s all ease 
+                opacity: 0
+
+                &:hover 
+                    transform: scale(1.05)
+
+                &.Visible 
+                    opacity: 1
+
+                svg 
+                    display: block
+                    width: 14px 
+                    height: 14px 
+                    fill: #fff
+
+        .SubjectSelectorInput 
+            color: rgba(0,0,0, .6)
+            box-sizing: border-box
+            margin-left: 0
+            padding: 0px
+            width: 100%
+            border: none
+            z-index: 10
+            font-size: 12px
+            border-radius: 0px
+            font-family: consolas, sans-serif
+
+            &:focus 
+                transform: none
+
+            &.SubjectSelectorDescription 
+                font-family: Poppins, sans-serif
+
+
+    .SubjectSelectorBody 
+        z-index: 999
+        width: 80px
+        transition: .2s all ease 
+        visibility: hidden 
+        opacity: 0
+        position: absolute
+        display: grid
+
+        .SubjectSelectorElement 
+            border: none 
+            border-radius: 0px
+
+        &.Active 
+            visibility: visible
+            opacity: 1

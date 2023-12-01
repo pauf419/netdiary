@@ -1,0 +1,41 @@
+
+.ModalWrapper 
+    position: fixed
+    color: #fff
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background: rgba(0,0,0, .5)
+    backdrop-filter: blur(10px)
+    z-index: 100000
+    display: flex
+    justify-content: center
+    align-items: center
+    visibility: hidden
+    transition: .2s all ease 
+    opacity: 0
+
+    &.ModalActive 
+        visibility: visible
+        opacity: 1
+
+    .ModalInner 
+        width: 30%
+        display: grid
+        background: #000
+        padding: 1rem
+        border-radius: 15px
+
+        .ModalHeader
+            margin-bottom: 1rem
+            display: flex
+            align-items: center
+            justify-content: space-between
+            font-style: italic
+            font-size: 20px
+
+            .ModalClose 
+                padding: .2rem .5rem
+                border: 2px solid #fff
+                font-size: 12px

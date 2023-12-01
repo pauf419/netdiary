@@ -1,0 +1,98 @@
+
+.DashboardPageWrapper 
+    position: relative
+
+    .Blurer 
+        position: absolute 
+        width: calc(100% - 2rem)
+        height: 100% 
+        z-index: 10000
+        background: rgba(0,0,0, .6)
+        backdrop-filter: blur(6px)
+        color: #fff
+
+        display: grid
+        justify-items: center
+        align-content: center
+        gap: 1rem
+        padding: 0 1rem
+        opacity: 0
+        visibility: hidden
+        
+        &.Active 
+            opacity: 1
+            visibility: visible
+
+        .AStyled 
+            font-size: 16px
+            color: #fff
+            text-decoration-color: #fff
+
+
+    .DashboardHeader 
+        display: flex
+        justify-content: space-around
+
+        .HeaderElementWrapper 
+            display: flex
+            align-items: center
+            padding: 1rem 2rem
+            gap: .5rem
+
+            .ElementTitle 
+                font-size: 12px
+
+    
+    .DashboardTableWrapper 
+        display: grid
+
+        .TableHeader 
+            display: flex
+            width: 100%
+
+            .SpacerContainer 
+                border-bottom: 2px solid rgba(0,0,0, .1)
+
+            .TableColumnHeader 
+                display: flex 
+                justify-content: center
+                width: 100%
+                border-left:2px solid rgba(0,0,0, .1)
+                border-bottom: 2px solid rgba(0,0,0, .1)
+                padding: 1rem 0
+
+        .TableBody      
+            .TableRowElement 
+                border-bottom: 2px solid rgba(0,0,0, .1)
+                display: flex
+                justify-content: start
+                font-size: 12px
+
+                .RowRefer
+                    text-align: center
+
+                .TableRowContent 
+                    display: flex
+                    width: 100%
+
+                    .TableRowMark 
+                        border-left: 2px solid rgba(0,0,0, .1)
+                        width: 100%
+                        height: 100%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+
+.MarkInput 
+    width: 100%
+    padding: 0
+    border: none
+    padding: 0 .2rem
+    text-align: center
+
+    &:focus
+        transform: none 
+
+
+
+            

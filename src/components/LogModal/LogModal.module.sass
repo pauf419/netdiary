@@ -1,0 +1,33 @@
+
+.LogModalWrapper 
+    position: fixed
+    background: rgba(0,0,0, .6)
+    color: #fff
+    backdrop-filter: blur(4px)
+    top: 0
+    left: 0
+    right: 0
+    transition: .2s all ease
+    display: flex
+    gap: 1rem
+    justify-content: space-between
+    padding: 1rem
+    align-items: center
+    z-index: 10000000
+
+    .MessageWrapper 
+        word-break: break-all
+
+    .IconWrapper
+        svg 
+            width: 24px 
+            height: 24px 
+            fill: #fff 
+            display: block
+
+    &.LogModalInactive 
+        transform: translateY(-100%)
+
+    &.LogModalActive
+        transform: translateY(0)
+    
